@@ -6,7 +6,7 @@ function Home() {
   const { name, division, description, picture } = identify;
 
   return (
-    <section className="min-h-screen container mx-auto">
+    <section className="h-full container mx-auto  mb-24 xl:mb-52">
       <div className="flex flex-col xl:flex-row justify-center xl:gap-20 items-center">
         <div className="flex flex-col justify-center items-center xl:justify-normal xl:items-start gap-2 order-last xl:order-first mt-10">
           <h3 className="text-2xl font-bold">Hello, My name is</h3>
@@ -24,7 +24,9 @@ function Home() {
               />
             </span>
           </h2>
-          <p className="py-4 max-w-lg xl:max-w-xl">{description[0]}</p>
+          <p className="py-4 max-w-lg xl:max-w-xl text-gray-500">
+            {description[0]}
+          </p>
           <div className="text-4xl flex justify-start gap-3">
             {socialMediaList.map(({ SocialMediaIcon, href }, index) => (
               <a href={href} key={index}>
@@ -45,7 +47,7 @@ function Home() {
           <img
             src={picture[0]}
             alt="PotoProfile"
-            className="rounded-2xl mx-auto rotate-0 xl:rotate-12 hover:rotate-0"
+            className="rounded-2xl mx-auto rotate-0 xl:rotate-12 hover:rotate-0 duration-300"
             width="350px"
             height="350px"
           />
