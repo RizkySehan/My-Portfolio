@@ -23,16 +23,38 @@ export const identify = {
   picture: ["/profile.jpeg", "/about.jpeg"],
 };
 
+export const linkList = [
+  {
+    title: "Home",
+    href: "home",
+  },
+  {
+    title: "About",
+    href: "about",
+  },
+  {
+    title: "Portfolio",
+    href: "portfolio",
+  },
+  {
+    title: "Contact",
+    href: "contact",
+  },
+];
+
 export const socialMediaList = [
   {
+    id: 1,
     SocialMediaIcon: FaLinkedin,
     href: "http://www.linkedin.com/in/rizkysehan",
   },
   {
+    id: 2,
     SocialMediaIcon: FaGithub,
     href: "https://github.com/RizkySehan",
   },
   {
+    id: 3,
     SocialMediaIcon: FaInstagram,
     href: "https://www.instagram.com/rizkysehann",
   },
