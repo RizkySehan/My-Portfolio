@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import {
   SiHtml5,
   SiCss3,
@@ -10,7 +10,12 @@ import {
   SiGithub,
   SiNpm,
   SiGit,
+  SiRedux,
 } from "react-icons/si";
+import { FiGithub } from "react-icons/fi";
+import { IoOpenOutline } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
+import { BsFillTelephoneFill } from "react-icons/bs";
 
 export const identify = {
   name: "Muhammad Rizky Ramdhani",
@@ -20,7 +25,8 @@ export const identify = {
     "Hi everyone! My name is Muhammad Rizky Ramdhani, I am a web developer from bekasi, west java. i am a person who has a high enthusiasm for all things programming and always feels challenged to work on new projects to create web-based applications, especially in the field of Front End. I really enjoy what I do now, I think that creating programs is not only about programming, but also about teamwork.",
     "As an informatics student, I have been involved in several projects at programming events, and in several assignments in college to create programs and work together in teams. I really enjoy what I am doing right now, in my opinion creating programs is not just a job but also an art that has aesthetic value.",
   ],
-  picture: ["/profile.jpeg", "/about.jpeg"],
+  picture: ["image/profile.jpeg", "image/about.jpeg"],
+  CV: "pdf/CV.pdf",
 };
 
 export const linkList = [
@@ -92,6 +98,12 @@ export const skillsList = [
     tech: true,
   },
   {
+    SkillIcon: SiRedux,
+    title: "Redux",
+    level: "Basic",
+    tech: true,
+  },
+  {
     SkillIcon: SiTailwindcss,
     title: "Tailwind CSS",
     level: "Intermediate",
@@ -120,5 +132,65 @@ export const skillsList = [
     title: "GIT",
     level: "Intermediate",
     tech: false,
+  },
+];
+
+export const portfolioList = [
+  {
+    id: 1,
+    title: "Rental Car Binar",
+    description:
+      "Using Bootstrap HTML I have created a simple Binar Car Rental website that can display data about what is provided and this is just a display only",
+    img: "image/project_1.jpeg",
+    techs: ["HTML", "Bootstrap"],
+    GithubIcon: FiGithub,
+    LinkIcon: IoOpenOutline,
+    LinkGithub: "https://github.com/RizkySehan/RentalMobil-Bootstrap",
+    LinkVercel: "https://rental-car-binar.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "TodoList App",
+    description:
+      "To-Do List program that I created using React JS is a application that can record the activities you are going to do and then delete those activities or marked as done when you are done",
+    img: "image/project_2.jpeg",
+    techs: ["React", "Bootstrap"],
+    GithubIcon: FiGithub,
+    LinkIcon: IoOpenOutline,
+    LinkGithub: "https://github.com/RizkySehan/React-todolist-app",
+    LinkVercel: "https://vercel.com/rizkysehan/reactjs-todolist-app",
+  },
+  {
+    id: 3,
+    title: "TodoList App",
+    description:
+      "To-Do List program that I created using React JS is a application that can record the activities you are going to do and then delete those activities or marked as done when you are done",
+    img: "image/project_2.jpeg",
+    techs: ["HTML", "Bootstrap", "Javascript"],
+    GithubIcon: FiGithub,
+    LinkIcon: IoOpenOutline,
+    LinkGithub: "https://github.com/RizkySehan/React-todolist-app",
+    LinkVercel: "https://vercel.com/rizkysehan/reactjs-todolist-app",
+  },
+];
+
+export const contactCardList = [
+  {
+    ContactIcon: BsFillTelephoneFill,
+    title: "Telephone",
+    contact: "+628 977 580 200",
+    href: "tel:+62897758200",
+  },
+  {
+    ContactIcon: MdEmail,
+    title: "Email",
+    contact: "rizkysehan@gmail.com",
+    href: "https://www.google.com/intl/id/gmail/about/",
+  },
+  {
+    ContactIcon: FaWhatsapp,
+    title: "Whatsapp",
+    contact: "+628 977 580 200",
+    href: "https://web.whatsapp.com/",
   },
 ];
