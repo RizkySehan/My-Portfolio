@@ -1,4 +1,3 @@
-import ReactTyped from "react-typed";
 import { identify, socialMediaList } from "../Constants/Data";
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 import { Link } from "react-scroll";
@@ -9,6 +8,7 @@ import {
   textVariants,
   zoomIn,
 } from "../Utils/Motion";
+import TypewriterComponent from "typewriter-effect";
 import { useContext } from "react";
 import { ThemeContext } from "../Context/ThemeContext";
 
@@ -47,7 +47,7 @@ function Home() {
           <h2
             className={`${
               theme === "light" ? "text-black" : "text-white"
-            } text-3xl xl:text-4xl font-bold `}
+            } text-3xl xl:text-4xl font-bold flex items-center gap-2`}
           >
             {"And I'm a "}
             <span
@@ -55,11 +55,8 @@ function Home() {
                 theme === "light" ? "text-primary" : "text-altPrimary"
               }`}
             >
-              <ReactTyped
-                strings={division}
-                typeSpeed={40}
-                backSpeed={50}
-                loop
+              <TypewriterComponent
+                options={{ strings: division, autoStart: true, loop: true }}
               />
             </span>
           </h2>
