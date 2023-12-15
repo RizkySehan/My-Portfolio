@@ -1,15 +1,16 @@
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { linkList, identify } from "../../Constants/Data";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../Utils/Motion";
 import { Link } from "react-scroll";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
-  const [theme, setTheme] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   const { CV } = identify;
 
@@ -33,17 +34,37 @@ function Navbar() {
         variants={fadeIn("down", "tween", 0.3, 0.75)}
         className="flex justify-between"
       >
-        <a href="#home" className="text-xl font-bold font-burtons">
-          Rizky<span className="text-teal-500">Sehan</span>
+        <a
+          href="#home"
+          className={`${
+            theme === "light" ? "text-black" : "text-white"
+          } text-xl font-bold font-burtons`}
+        >
+          Rizky
+          <span
+            className={`${
+              theme === "light" ? "text-primary" : "text-altPrimary"
+            }`}
+          >
+            Sehan
+          </span>
         </a>
-        <div className="hidden md:flex justify-center items-center gap-5">
+        <div
+          className={`${
+            theme === "light" ? "text-black" : "text-white"
+          } hidden md:flex justify-center items-center gap-5`}
+        >
           {linkList.map(({ title, href }, index) => (
             <Link
               key={index}
               to={href}
               smooth
               duration={500}
-              className="text-base font-semibold hover:text-teal-500 cursor-pointer"
+              className={`${
+                theme === "light"
+                  ? "hover:text-primary"
+                  : "hover:text-altPrimary"
+              } text-base font-semibold cursor-pointer`}
             >
               {title}
             </Link>
@@ -51,11 +72,11 @@ function Navbar() {
         </div>
 
         <ul className="hidden md:flex items-center">
-          <li onClick={() => setTheme(!theme)}>
-            {theme ? (
-              <BsFillMoonStarsFill className="cursor-pointer text-xl" />
-            ) : (
+          <li onClick={toggleTheme}>
+            {theme === "light" ? (
               <BsFillSunFill className="cursor-pointer text-xl" />
+            ) : (
+              <BsFillMoonStarsFill className="cursor-pointer text-xl text-white" />
             )}
           </li>
           <li>
@@ -71,7 +92,9 @@ function Navbar() {
 
         <div
           onClick={() => setNav(!nav)}
-          className="cursor-pointer z-20 md:hidden"
+          className={`${
+            theme === "light" ? "text-black" : "text-white"
+          } cursor-pointer z-20 md:hidden`}
         >
           {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
         </div>
@@ -91,11 +114,11 @@ function Navbar() {
               </Link>
             ))}
             <ul className="flex items-center">
-              <li onClick={() => setTheme(!theme)}>
-                {theme ? (
-                  <BsFillMoonStarsFill className="cursor-pointer text-xl" />
-                ) : (
+              <li onClick={toggleTheme}>
+                {theme === "light" ? (
                   <BsFillSunFill className="cursor-pointer text-xl" />
+                ) : (
+                  <BsFillMoonStarsFill className="cursor-pointer text-xl" />
                 )}
               </li>
               <li>

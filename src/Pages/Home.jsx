@@ -9,9 +9,12 @@ import {
   textVariants,
   zoomIn,
 } from "../Utils/Motion";
+import { useContext } from "react";
+import { ThemeContext } from "../Context/ThemeContext";
 
 function Home() {
   const { name, division, description, picture } = identify;
+  const { theme } = useContext(ThemeContext);
 
   return (
     <section id="home" className="min-h-screen container mx-auto">
@@ -26,13 +29,32 @@ function Home() {
           variants={slideIn("left", "tween", 0.1, 1)}
           className="flex flex-col justify-center items-center xl:justify-normal xl:items-start gap-2 order-last xl:order-first mt-10"
         >
-          <h3 className="text-2xl font-bold">Hello, My name is</h3>
-          <h1 className="text-4xl xl:text-6xl font-bold">{name}</h1>
+          <h3
+            className={` ${
+              theme === "light" ? "text-light" : "text-altLight"
+            } text-2xl font-bold`}
+          >
+            Hello, My name is
+          </h3>
+          <h1
+            className={`${
+              theme === "light" ? "text-black" : "text-white"
+            } text-4xl xl:text-6xl font-bold`}
+          >
+            {name}
+          </h1>
 
-          <h2 className="text-3xl xl:text-4xl font-bold"></h2>
-          <h2 className="text-3xl xl:text-4xl font-bold ">
+          <h2
+            className={`${
+              theme === "light" ? "text-black" : "text-white"
+            } text-3xl xl:text-4xl font-bold `}
+          >
             {"And I'm a "}
-            <span className="text-teal-500">
+            <span
+              className={`${
+                theme === "light" ? "text-primary" : "text-altPrimary"
+              }`}
+            >
               <ReactTyped
                 strings={division}
                 typeSpeed={40}
@@ -41,7 +63,11 @@ function Home() {
               />
             </span>
           </h2>
-          <p className="py-4 max-w-lg xl:max-w-xl text-gray-500">
+          <p
+            className={`${
+              theme === "light" ? "text-light" : "text-altLight"
+            } font-bold py-4 max-w-lg xl:max-w-xl`}
+          >
             {description[0]}
           </p>
           <div className="text-4xl flex justify-start gap-3">
@@ -52,7 +78,11 @@ function Home() {
                 key={id}
                 className="hover:-translate-y-1 duration-500"
               >
-                <SocialMediaIcon />
+                <SocialMediaIcon
+                  className={`${
+                    theme === "light" ? "text-black" : "text-white"
+                  }`}
+                />
               </a>
             ))}
           </div>
@@ -63,8 +93,18 @@ function Home() {
               duration={500}
               className="flex items-center justify-center gap-1 mt-5 animate-bounce cursor-pointer"
             >
-              <p className="text-lg font-semibold">See about me</p>
-              <IoArrowDownCircleOutline className="text-4xl text-teal-500" />
+              <p
+                className={`${
+                  theme === "light" ? "text-black" : "text-white"
+                } text-lg font-semibold`}
+              >
+                See about me
+              </p>
+              <IoArrowDownCircleOutline
+                className={`${
+                  theme === "light" ? "text-primary" : "text-altPrimary"
+                } text-4xl`}
+              />
             </Link>
           </motion.div>
         </motion.div>

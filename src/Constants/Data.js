@@ -158,7 +158,7 @@ export const portfolioList = [
     GithubIcon: FiGithub,
     LinkIcon: IoOpenOutline,
     LinkGithub: "https://github.com/RizkySehan/React-todolist-app",
-    LinkVercel: "https://vercel.com/rizkysehan/reactjs-todolist-app",
+    LinkVercel: "https://reactjs-todolist-app.vercel.app/",
   },
   {
     id: 3,
@@ -179,18 +179,18 @@ export const contactCardList = [
     ContactIcon: BsFillTelephoneFill,
     title: "Telephone",
     contact: "+628 977 580 200",
-    href: "tel:+62897758200",
+    href: "tel://08977580200",
   },
   {
     ContactIcon: MdEmail,
     title: "Email",
     contact: "rizkysehan@gmail.com",
-    href: "https://www.google.com/intl/id/gmail/about/",
+    href: "https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=rizkysehan@gmail.com",
   },
   {
     ContactIcon: FaWhatsapp,
     title: "Whatsapp",
     contact: "+628 977 580 200",
-    href: "https://web.whatsapp.com/",
+    href: "https://wa.me/08977580200",
   },
 ];

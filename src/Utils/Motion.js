@@ -17,25 +17,6 @@ export function slideIn(direction, type, delay, duration) {
   };
 }
 
-export function slideOut(direction, type, delay, duration) {
-  return {
-    hidden: {
-      x: 0,
-      y: 0,
-    },
-    show: {
-      x: direction === "right" ? "100%" : direction === "left" ? "-100%" : 0,
-      y: direction === "up" ? "100%" : direction === "down" ? "-100%" : 0,
-      transition: {
-        type,
-        delay,
-        duration,
-        ease: "easeIn",
-      },
-    },
-  };
-}
-
 export function fadeIn(direction, type, delay, duration) {
   return {
     hidden: {
@@ -57,27 +38,6 @@ export function fadeIn(direction, type, delay, duration) {
   };
 }
 
-export function fadeOut(direction, type, delay, duration) {
-  return {
-    hidden: {
-      x: 0,
-      y: 0,
-      opacity: 1,
-    },
-    show: {
-      x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
-      opacity: 0,
-      transition: {
-        type,
-        delay,
-        duration,
-        ease: "easeIn",
-      },
-    },
-  };
-}
-
 export function zoomIn(delay, duration) {
   return {
     hidden: {
@@ -90,25 +50,6 @@ export function zoomIn(delay, duration) {
       transition: {
         type: "tween",
         ease: "easeOut",
-        delay,
-        duration,
-      },
-    },
-  };
-}
-
-export function zoomOut(delay, duration) {
-  return {
-    hidden: {
-      scale: 1,
-      opacity: 1,
-    },
-    show: {
-      scale: 0,
-      opacity: 0,
-      transition: {
-        type: "tween",
-        ease: "easeIn",
         delay,
         duration,
       },
@@ -143,20 +84,5 @@ export function textVariants(delay) {
         delay,
       },
     },
-  };
-}
-
-export function textContainer() {
-  return {
-    hidden: {
-      opacity: 0,
-    },
-    show: (index = 1) => ({
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: index * 0.1,
-      },
-    }),
   };
 }
