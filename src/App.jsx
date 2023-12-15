@@ -10,14 +10,20 @@ import { ThemeContext } from "./Context/ThemeContext";
 function App() {
   const { theme } = useContext(ThemeContext);
   return (
-    <main className={`${theme === "light" ? "bg-white" : "bg-secondary"}`}>
+    <>
       <Navbar />
-      <Home />
-      <About />
-      <Portfolio />
-      <Contact />
+      <main
+        className={`${
+          theme === "light" ? "bg-white" : "bg-secondary"
+        } max-w-full p-4`}
+      >
+        <Home />
+        <About />
+        <Portfolio />
+        <Contact />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
 

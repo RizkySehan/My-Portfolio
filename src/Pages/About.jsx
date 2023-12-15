@@ -95,7 +95,7 @@ function About() {
           </span>{" "}
           that {"i've"} learning and experienced below
         </motion.p>
-        <div className="grid grid-cols-2 px-10 md:px-0 md:grid-cols-3 lg:grid-cols-4 gap-y-4 md:gap-x-3 md:gap-y-8">
+        <div className="grid grid-cols-2 gap-4 px-10 md:px-0 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-8 md:gap-x-3 md:gap-y-8">
           {skillsList.map(({ SkillIcon, title, level }, index) => (
             <motion.div
               variants={fadeIn("up", "tween", 1, 1)}
@@ -104,7 +104,7 @@ function About() {
                 theme === "light"
                   ? "bg-white border-b-2 border-primary"
                   : "bg-altSecondary border-b-2 border-altPrimary"
-              } flex justify-center items-center flex-col rounded-lg shadow-lg w-56 xl:w-64 h-16 hover:-translate-y-1 cursor-pointer relative duration-500`}
+              } flex justify-center items-center flex-col rounded-lg shadow-lg md:w-56 2xl:w-64 h-16 hover:-translate-y-1 cursor-pointer relative duration-500`}
             >
               <motion.div
                 variants={textVariants(1.6)}

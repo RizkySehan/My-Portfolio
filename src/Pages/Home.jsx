@@ -32,14 +32,14 @@ function Home() {
           <h3
             className={` ${
               theme === "light" ? "text-light" : "text-altLight"
-            } text-2xl font-bold`}
+            } text-lg md:text-xl lg:text-2xl font-bold`}
           >
             Hello, My name is
           </h3>
           <h1
             className={`${
               theme === "light" ? "text-black" : "text-white"
-            } text-4xl xl:text-6xl font-bold`}
+            } text-2xl md:text-4xl xl:text-6xl font-bold`}
           >
             {name}
           </h1>
@@ -47,7 +47,7 @@ function Home() {
           <h2
             className={`${
               theme === "light" ? "text-black" : "text-white"
-            } text-3xl xl:text-4xl font-bold flex items-center gap-2`}
+            } text-2xl md:text-3xl xl:text-4xl font-bold flex items-center gap-2`}
           >
             {"And I'm a "}
             <span
