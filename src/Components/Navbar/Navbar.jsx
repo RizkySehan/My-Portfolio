@@ -27,7 +27,11 @@ function Navbar() {
       whileInView="show"
       initial="hidden"
       className={`${
-        isScrolled ? "shadow-lg lg:bg-glassmorph bg-white" : ""
+        isScrolled && theme === "light"
+          ? "shadow-lg lg:bg-glassmorph bg-white"
+          : isScrolled && theme === "dark"
+          ? "shadow-lg lg:bg-glassmorph bg-[#0e1b31]"
+          : "shadow-none bg-transparent"
       } px-10 py-6 fixed top-0 left-0 w-full transition-all lg:backdrop-blur-[20px] z-50`}
     >
       <motion.nav

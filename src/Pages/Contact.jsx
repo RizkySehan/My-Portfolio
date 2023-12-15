@@ -34,7 +34,7 @@ function Contact() {
         </motion.h1>
         <div className="flex justify-between flex-col lg:flex-row gap-5">
           <motion.div
-            variants={fadeIn("right", "tween", 1, 1)}
+            variants={fadeIn("down", "tween", 1, 1)}
             className="flex-1"
           >
             <div className="flex flex-col gap-y-4 mb-4 items-center lg:items-start">
@@ -56,7 +56,7 @@ function Contact() {
             <CardContact />
           </motion.div>
           <motion.div
-            variants={fadeIn("left", "tween", 1, 1)}
+            variants={fadeIn("down", "tween", 1, 1.2)}
             className="flex-1"
           >
             <div className="flex flex-col gap-y-4 mb-4 items-center lg:items-start mt-8 lg:mt-0">
