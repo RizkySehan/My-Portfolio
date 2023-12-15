@@ -9,7 +9,7 @@ function Contact() {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <section id="contact" className="container mx-auto xl:px-32">
+    <section id="contact" className="container mx-auto px-8 xl:px-32">
       <motion.div
         variants={staggerContainer}
         viewport={{ once: true, amount: 0.25 }}
@@ -21,7 +21,7 @@ function Contact() {
           variants={zoomIn(0, 1)}
           className={`${
             theme === "light" ? "text-black" : "text-white"
-          } text-4xl font-bold text-center mb-14`}
+          } text-3xl lg:text-4xl font-bold text-center mb-14`}
         >
           Contact{" "}
           <span
@@ -41,14 +41,14 @@ function Contact() {
               <h1
                 className={`${
                   theme === "light" ? "text-primary" : "text-altPrimary"
-                } text-3xl font-semibold`}
+                } text-2xl lg:text-3xl font-semibold`}
               >
                 {"Let's discuss your project"}
               </h1>
               <p
                 className={`${
                   theme === "light" ? "text-black" : "text-white"
-                } text-lg font-semibold`}
+                } lg:text-lg font-semibold`}
               >
                 Just contact me with this media below
               </p>
@@ -63,14 +63,14 @@ function Contact() {
               <h1
                 className={`${
                   theme === "light" ? "text-primary" : "text-altPrimary"
-                } text-3xl font-semibold`}
+                } text-2xl lg:text-3xl font-semibold`}
               >
                 Feel free to contact me
               </h1>
               <p
                 className={`${
                   theme === "light" ? "text-black" : "text-white"
-                } text-lg font-semibold`}
+                } lg:text-lg font-semibold`}
               >
                 Or contact me through this form
               </p>

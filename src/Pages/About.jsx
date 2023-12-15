@@ -25,7 +25,7 @@ function About() {
           variants={zoomIn(0, 1)}
           className={`${
             theme === "light" ? "text-black" : "text-white"
-          } text-4xl font-bold text-center mb-10`}
+          } text-3xl lg:text-4xl font-bold text-center mb-10`}
         >
           About{" "}
           <span
@@ -39,18 +39,18 @@ function About() {
         <div
           className={`${
             theme === "light" ? "bg-white" : "bg-altSecondary"
-          } flex justify-around items-center flex-col xl:flex-row gap-10  border-b-2 border-teal-500 p-5 xl:px-32 xl:py-5 shadow-md rounded-xl`}
+          } flex justify-around items-center flex-col xl:flex-row gap-10  border-b-2 border-teal-500 p-5 xl:px-32 xl:py-5 shadow-md rounded-xl mx-4 lg:mx-0`}
         >
           <motion.img
             variants={fadeIn("right", "tween", 1, 1.1)}
             src={picture[1]}
             alt="About.Jpeg"
-            className="rounded-full xl:rounded-lg w-80 h-80"
+            className="rounded-full w-60 h-60 xl:rounded-lg lg:w-80 lg:h-80"
           />
           <div
             className={`${
               theme === "light" ? "text-black" : "text-white"
-            } flex flex-col gap-6 text-lg font-semibold`}
+            } flex flex-col gap-6 text-sm lg:text-lg font-semibold`}
           >
             <motion.p variants={textVariants(1.1)}>{description[1]}</motion.p>
             <motion.p variants={textVariants(1.2)}>{description[2]}</motion.p>
@@ -68,7 +68,7 @@ function About() {
           variants={zoomIn(1, 1)}
           className={`${
             theme === "light" ? "text-black" : "text-white"
-          } text-3xl font-semibold text-center mb-3`}
+          } text-2xl lg:text-3xl font-semibold text-center mb-3`}
         >
           Skill
           <span
@@ -83,7 +83,7 @@ function About() {
           variants={textVariants(1.4)}
           className={`${
             theme === "light" ? "text-light" : "text-altLight"
-          } text-lg font-semibold text-center mb-10`}
+          } text-sm lg:text-lg font-semibold text-center mb-10 mx-4 lg:mx-0`}
         >
           There are some{" "}
           <span
@@ -104,7 +104,7 @@ function About() {
                 theme === "light"
                   ? "bg-white border-b-2 border-primary"
                   : "bg-altSecondary border-b-2 border-altPrimary"
-              } flex justify-center items-center flex-col rounded-lg shadow-lg md:w-56 2xl:w-64 h-16 hover:-translate-y-1 cursor-pointer relative duration-500`}
+              } flex justify-center items-center flex-col rounded-lg shadow-lg w-36 md:w-56 2xl:w-64 h-16 hover:-translate-y-1 cursor-pointer relative duration-500`}
             >
               <motion.div
                 variants={textVariants(1.6)}
@@ -113,12 +113,12 @@ function About() {
                 <SkillIcon
                   className={`${
                     theme === "light" ? "text-primary" : "text-altPrimary"
-                  } text-4xl`}
+                  } text-2xl md:text-4xl`}
                 />
                 <p
                   className={`${
                     theme === "light" ? "text-black" : "text-white"
-                  } font-semibold text-xl`}
+                  } font-semibold text-lg md:text-xl`}
                 >
                   {title}
                 </p>

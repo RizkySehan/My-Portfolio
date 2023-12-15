@@ -17,13 +17,13 @@ function Home() {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <section id="home" className="min-h-screen container mx-auto">
+    <section id="home" className="min-h-screen container mx-auto p-5">
       <motion.div
         variants={staggerContainer}
         viewport={{ once: true, amount: 0.25 }}
         whileInView="show"
         initial="hidden"
-        className="flex flex-col xl:flex-row justify-center xl:gap-20 items-center pt-24 xl:pt-40"
+        className="flex flex-col xl:flex-row justify-center xl:gap-20 items-center pt-24 2xl:pt-40"
       >
         <motion.div
           variants={slideIn("left", "tween", 0.1, 1)}
@@ -32,14 +32,14 @@ function Home() {
           <h3
             className={` ${
               theme === "light" ? "text-light" : "text-altLight"
-            } text-lg md:text-xl lg:text-2xl font-bold`}
+            } text-lg md:text-xl xl:text-2xl font-bold`}
           >
             Hello, My name is
           </h3>
           <h1
             className={`${
               theme === "light" ? "text-black" : "text-white"
-            } text-2xl md:text-4xl xl:text-6xl font-bold`}
+            } text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold`}
           >
             {name}
           </h1>
@@ -47,7 +47,7 @@ function Home() {
           <h2
             className={`${
               theme === "light" ? "text-black" : "text-white"
-            } text-2xl md:text-3xl xl:text-4xl font-bold flex items-center gap-2`}
+            } text-2xl md:text-3xl 2xl:text-4xl font-bold flex items-center gap-2`}
           >
             {"And I'm a "}
             <span
@@ -63,11 +63,11 @@ function Home() {
           <p
             className={`${
               theme === "light" ? "text-light" : "text-altLight"
-            } font-bold py-4 max-w-lg xl:max-w-xl`}
+            } text-sm md:text-lg font-bold py-4 max-w-lg xl:max-w-xl`}
           >
             {description[0]}
           </p>
-          <div className="text-4xl flex justify-start gap-3">
+          <div className="text-2xl xl:text-4xl flex justify-start gap-3">
             {socialMediaList.map(({ id, SocialMediaIcon, href }) => (
               <a
                 href={href}

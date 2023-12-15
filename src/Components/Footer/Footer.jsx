@@ -23,7 +23,7 @@ function Footer() {
       </Link>
       <motion.div
         variants={fadeIn("down", "tween", 1, 1.1)}
-        className="text-2xl flex justify-start gap-3"
+        className="text-xl lg:text-2xl flex justify-start gap-3"
       >
         {socialMediaList.map(({ id, SocialMediaIcon, href }) => (
           <a
@@ -55,7 +55,7 @@ function Footer() {
       <div className="w-full bg-teal-700 text-center mt-4">
         <motion.p
           variants={fadeIn("down", "tween", 1, 1.3)}
-          className="text-white text-md p-1"
+          className="text-altLight lg:text-md p-1"
         >
           &#169; MuhammadRizkyRamdhani All Rights reserved
         </motion.p>

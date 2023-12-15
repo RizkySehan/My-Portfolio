@@ -28,7 +28,7 @@ function Navbar() {
       initial="hidden"
       className={`${
         isScrolled ? "shadow-lg lg:bg-glassmorph bg-white" : ""
-      } px-10 py-6 fixed top-0 left-0 w-screen transition-all lg:backdrop-blur-[20px] z-50`}
+      } px-10 py-6 fixed top-0 left-0 w-full transition-all lg:backdrop-blur-[20px] z-50`}
     >
       <motion.nav
         variants={fadeIn("down", "tween", 0.3, 0.75)}

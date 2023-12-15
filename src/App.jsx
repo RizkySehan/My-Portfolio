@@ -11,18 +11,18 @@ function App() {
   const { theme } = useContext(ThemeContext);
   return (
     <>
-      <Navbar />
       <main
         className={`${
           theme === "light" ? "bg-white" : "bg-secondary"
-        } max-w-full p-4`}
+        } w-screen mx-auto`}
       >
+        <Navbar />
         <Home />
         <About />
         <Portfolio />
         <Contact />
+        <Footer />
       </main>
-      <Footer />
     </>
   );
 }
