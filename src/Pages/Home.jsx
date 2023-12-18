@@ -23,7 +23,7 @@ function Home() {
         viewport={{ once: true, amount: 0.25 }}
         whileInView="show"
         initial="hidden"
-        className="flex flex-col xl:flex-row justify-center xl:gap-20 items-center pt-24 2xl:pt-40"
+        className="flex flex-col xl:flex-row justify-center xl:gap-20 items-center pt-10 sm:pt-24 2xl:pt-40"
       >
         <motion.div
           variants={slideIn("left", "tween", 0.1, 1)}
@@ -43,27 +43,28 @@ function Home() {
           >
             {name}
           </h1>
-
-          <h2
-            className={`${
-              theme === "light" ? "text-black" : "text-white"
-            } text-2xl md:text-3xl 2xl:text-4xl font-bold flex items-center gap-2`}
-          >
-            {"And I'm a "}
-            <span
+          <div>
+            <h2
               className={`${
-                theme === "light" ? "text-primary" : "text-altPrimary"
-              }`}
+                theme === "light" ? "text-black" : "text-white"
+              } text-lg md:text-3xl 2xl:text-4xl font-bold flex flex-col lg:flex-row items-center gap-2`}
             >
-              <TypewriterComponent
-                options={{ strings: division, autoStart: true, loop: true }}
-              />
-            </span>
-          </h2>
+              {"And I'm a "}
+              <span
+                className={`${
+                  theme === "light" ? "text-primary" : "text-altPrimary"
+                }`}
+              >
+                <TypewriterComponent
+                  options={{ strings: division, autoStart: true, loop: true }}
+                />
+              </span>
+            </h2>
+          </div>
           <p
             className={`${
               theme === "light" ? "text-light" : "text-altLight"
-            } text-sm md:text-lg font-bold py-4 max-w-lg xl:max-w-xl`}
+            } text-sm md:text-lg font-bold py-4 max-w-lg xl:max-w-xl text-center lg:text-left`}
           >
             {description[0]}
           </p>
@@ -93,14 +94,14 @@ function Home() {
               <p
                 className={`${
                   theme === "light" ? "text-black" : "text-white"
-                } text-lg font-semibold`}
+                } lg:text-lg font-semibold`}
               >
                 See about me
               </p>
               <IoArrowDownCircleOutline
                 className={`${
                   theme === "light" ? "text-primary" : "text-altPrimary"
-                } text-4xl`}
+                } text-2xl lg:text-4xl`}
               />
             </Link>
           </motion.div>

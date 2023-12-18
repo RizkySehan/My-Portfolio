@@ -39,7 +39,7 @@ function Portfolio() {
               theme === "light" ? "text-primary" : "text-altPrimary"
             } font-bold text-xl lg:text-2xl`}
           >
-            Protect {"i'm"} created
+            Project {"i'm"} created
           </h1>
           <p
             className={`${

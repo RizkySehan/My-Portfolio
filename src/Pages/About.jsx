@@ -45,7 +45,7 @@ function About() {
             variants={fadeIn("right", "tween", 1, 1.1)}
             src={picture[1]}
             alt="About.Jpeg"
-            className="rounded-full w-60 h-60 xl:rounded-lg lg:w-80 lg:h-80"
+            className="rounded-full w-60 h-60 xl:rounded-lg lg:w-80 lg:h-80 object-cover object-center"
           />
           <div
             className={`${

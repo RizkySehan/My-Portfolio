@@ -30,7 +30,7 @@ function Footer() {
             href={href}
             target="_blink"
             key={id}
-            className=" p-2 bg-white rounded-lg hover:-translate-y-1 duration-500"
+            className="text-primary p-2 bg-white rounded-lg hover:-translate-y-1 duration-500"
           >
             <SocialMediaIcon />
           </a>

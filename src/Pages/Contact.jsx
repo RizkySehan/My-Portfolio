@@ -2,11 +2,42 @@ import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, zoomIn } from "../Utils/Motion";
 import CardContact from "../Components/CardContact/CardContact";
 import { FaPaperPlane } from "react-icons/fa";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { ThemeContext } from "../Context/ThemeContext";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 function Contact() {
   const { theme } = useContext(ThemeContext);
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVER_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_PUBLIC_KEY
+      )
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Your Message is Succesfully Sended!",
+          timer: 2500,
+        });
+      })
+      .catch(() =>
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+          timer: 2500,
+        })
+      );
+    e.target.reset();
+  };
 
   return (
     <section id="contact" className="container mx-auto px-8 xl:px-32">
@@ -75,12 +106,18 @@ function Contact() {
                 Or contact me through this form
               </p>
             </div>
-            <form action="" className="flex flex-col gap-y-5">
+            <form
+              action=""
+              ref={form}
+              onSubmit={sendEmail}
+              className="flex flex-col gap-y-5"
+            >
               <input
                 type="text"
                 id="fullName"
                 name="fullName"
                 placeholder="Full Name"
+                required
                 className={`${
                   theme === "light"
                     ? "border border-primary"
@@ -93,6 +130,7 @@ function Contact() {
                 id="email"
                 name="email"
                 placeholder="Email"
+                required
                 className={`${
                   theme === "light"
                     ? "border border-primary"
@@ -103,6 +141,7 @@ function Contact() {
                 id="message"
                 name="message"
                 placeholder="Message"
+                required
                 className={`${
                   theme === "light"
                     ? "border border-primary"

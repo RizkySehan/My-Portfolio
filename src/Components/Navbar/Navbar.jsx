@@ -38,11 +38,13 @@ function Navbar() {
         variants={fadeIn("down", "tween", 0.3, 0.75)}
         className="flex justify-between"
       >
-        <a
-          href="#home"
+        <Link
+          to="home"
+          smooth
+          duration={500}
           className={`${
             theme === "light" ? "text-black" : "text-white"
-          } text-xl font-bold font-burtons`}
+          } text-xl font-bold font-burtons cursor-pointer`}
         >
           Rizky
           <span
@@ -52,7 +54,7 @@ function Navbar() {
           >
             Sehan
           </span>
-        </a>
+        </Link>
         <div
           className={`${
             theme === "light" ? "text-black" : "text-white"
