@@ -16,7 +16,7 @@ function CardPortfolio() {
           key={portfolio.id}
           className={`${
             theme === "light"
-              ? "bg-white border-b-2 border-Primary"
+              ? "bg-white border-b-2 border-primary"
               : "bg-altSecondary border-b-2 border-altPrimary"
           } group hover:border hover:border-teal-500 p-4 shadow-md rounded-xl duration-100 flex flex-col justify-between`}
         >

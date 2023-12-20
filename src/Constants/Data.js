@@ -105,7 +105,7 @@ export const skillsList = [
   },
   {
     SkillIcon: SiTailwindcss,
-    title: "Tailwind CSS",
+    title: "Tailwind",
     level: "Intermediate",
     tech: true,
   },
@@ -162,15 +162,15 @@ export const portfolioList = [
   },
   {
     id: 3,
-    title: "TodoList App",
+    title: "Movie List",
     description:
-      "To-Do List program that I created using React JS is a application that can record the activities you are going to do and then delete those activities or marked as done when you are done",
-    img: "image/project_2.jpeg",
-    techs: ["HTML", "Bootstrap", "Javascript"],
+      "The Movie List application that I created using React JS, Tailwind CSS and Redux that can fetch data or save data from the TMDB API and display the data into several movie lists and we can search for the latest movie information this month and can search for movies that you want to know in detail",
+    img: "image/project_3.jpeg",
+    techs: ["React", "Redux", "Tailwind"],
     GithubIcon: FiGithub,
     LinkIcon: IoOpenOutline,
-    LinkGithub: "https://github.com/RizkySehan/React-todolist-app",
-    LinkVercel: "https://vercel.com/rizkysehan/reactjs-todolist-app",
+    LinkGithub: "https://github.com/RizkySehan/MovieList-React",
+    LinkVercel: "https://react-app-movie-sigma.vercel.app/",
   },
 ];
 
