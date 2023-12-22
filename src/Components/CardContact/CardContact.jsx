@@ -7,7 +7,7 @@ function CardContact() {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="flex flex-col gap-2 mx-auto lg:mx-0">
+    <div className="flex flex-col justify-center gap-2 lg:mx-0 w-full">
       {contactCardList.map(({ ContactIcon, title, contact, href }, index) => (
         <Link key={index} to={href} target="_blank">
           <div
@@ -15,7 +15,7 @@ function CardContact() {
               theme === "light"
                 ? "bg-white border-b-2 border-Primary"
                 : "bg-altSecondary border-b-2 border-altPrimary"
-            } flex flex-col justify-center items-center gap-y-3 p-5 w-full lg:w-4/6 rounded-xl shadow-lg hover:scale-105 duration-300`}
+            } flex flex-col justify-center items-center gap-y-3 p-5 w-full rounded-xl shadow-lg hover:scale-105 duration-300`}
           >
             <ContactIcon size={25} className="text-teal-500" />
             <h4

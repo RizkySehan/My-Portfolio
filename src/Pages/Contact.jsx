@@ -63,10 +63,10 @@ function Contact() {
             Me
           </span>
         </motion.h1>
-        <div className="flex justify-between flex-col lg:flex-row gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-[30%_60%] lg:gap-32 lg:flex-row w-full">
           <motion.div
             variants={fadeIn("down", "tween", 1, 1)}
-            className="flex-1"
+            className="flex flex-col"
           >
             <div className="flex flex-col gap-y-4 mb-4 items-center lg:items-start">
               <h1
@@ -88,7 +88,7 @@ function Contact() {
           </motion.div>
           <motion.div
             variants={fadeIn("down", "tween", 1, 1.2)}
-            className="flex-1"
+            className="flex flex-col"
           >
             <div className="flex flex-col gap-y-4 mb-4 items-center lg:items-start mt-8 lg:mt-0">
               <h1
