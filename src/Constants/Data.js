@@ -172,6 +172,18 @@ export const portfolioList = [
     LinkGithub: "https://github.com/RizkySehan/MovieList-React",
     LinkVercel: "https://react-app-movie-sigma.vercel.app/",
   },
+  {
+    id: 4,
+    title: "Ruang Edukasi App",
+    description:
+      "Ruang Edukasi is a collaborative project between the Frontend and Backend teams. The project we created is a kind of paid online course with various features in general when accessing famous online courses.",
+    img: "image/project_4.jpeg",
+    techs: ["React", "Redux", "Tailwind"],
+    GithubIcon: FiGithub,
+    LinkIcon: IoOpenOutline,
+    LinkGithub: "https://github.com/RizkySehan/ruangEdukasi-finalProject",
+    LinkVercel: "https://ruang-edukasi-final-project.vercel.app/",
+  },
 ];
 
 export const contactCardList = [
